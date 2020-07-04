@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>AMFJS</title>
+    <script src="amf.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var amfClient = new amf.Client("amfphp", "http://127.0.0.1/amf/server/gateway.php");
+        var p = amfClient.invoke("test-name-does-not-matter", "ping", []);
+
+        p.then(
+            function(res) {
+                console.log(res.data);
+            },
+            function(err) {
+                console.log("ping error");
+            }
+        );
+    </script>
+</body>
+</html>
