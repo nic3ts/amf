@@ -8,15 +8,15 @@
 </head>
 <body>
     <script type="text/javascript">
-        var amfClient = new amf.Client("amfphp", "https://amf.nic3ts.com/gateway.php");
-        var p = amfClient.invoke("test-name-does-not-matter", "ping", []);
+        var amfClient = new amf.Client("amfphp", "http://amf.nic3ts.com/gateway.php");
+        var p = amfClient.invoke("test", "ping", []);
 
         p.then(
             function(res) {
                 console.log(res.data);
             },
             function(err) {
-                console.log("ping error");
+                console.log(err);
             }
         );
     </script>
