@@ -7,7 +7,7 @@
 <body>
     <script type="text/javascript">
         var amfClient = new amf.Client("amfphp", "http://127.0.0.1/server/gateway.php");
-        var p = amfClient.invoke("test-name-does-not-matter", "ping", []);
+        var p = amfClient.invoke("test", "ping", []);
 
         p.then(
             function(res) {

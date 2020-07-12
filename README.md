@@ -1,11 +1,11 @@
 amfjs
 =====
 
-AMFJS is an AMF Client JavaScript library 
+AMFJS is an AMF Client JavaScript library
 
 ## Limited AMF 0
 
-The library does enough AMF 0 to be able to send and receive packet headers. 
+The library does enough AMF 0 to be able to send and receive packet headers.
 
 # Basic Example
 
@@ -22,7 +22,7 @@ Here is a AMFJS Ping Pong example:
     <script type="text/javascript">
         var amfClient = new amf.Client("amfphp", "http://127.0.0.1/server/gateway.php");
         var p = amfClient.invoke("test", "ping", []);
-        
+
         p.then(
             function(res) {
                 console.log(res.data);
@@ -158,7 +158,7 @@ Ultimately I decided to implement AMF 3 with limited AMF 0 support. Then write m
 
 As the effort on the AMFEXT C extension for PHP swallowed enormous amounts of time, writing documentation and tests for this library got delayed.
 
-  
+
 ## TODO
 
 * Documentation
